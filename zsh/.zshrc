@@ -131,7 +131,10 @@ export PATH="$PATH:$HOME/FlutterDev/flutter/bin"fpath=($fpath "/Users/acty/.zfun
 
 export PATH="$PATH:/opt/flutter/bin"
 
+bindkey -s ^f "tmux-sessionizer\n"
+
 alias vim='nvim'
+alias cvim='vim ~/.dotfiles/nvim/.config/nvim/init.vim'
 alias zephy='cd ~/Documents/Epitech/Zephy'
 alias sf='cd ~/Documents/SF/'
 alias pacman='cd /Users/acty/Documents/Perso/dev/Smol-pacman'

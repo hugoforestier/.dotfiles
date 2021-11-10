@@ -1,5 +1,5 @@
 set tabstop=3 softtabstop=4
-set shiftwidth=5
+set shiftwidth=4
 set expandtab
 set smartindent
 set guicursor=
@@ -34,9 +34,19 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'akinsho/flutter-tools.nvim'
 
+"Dart/Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 " For flutter-
 Plug 'nvim-lua/plenary.nvim'
 Plug 'akinsho/flutter-tools.nvim'
+
+" For git
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 " For luasnip user.
 Plug 'L3MON4D3/LuaSnip'
@@ -45,6 +55,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Better UI LSP
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
+
+" Tree
+Plug 'preservim/nerdtree'
 
 " ESLint
 Plug 'w0rp/ale'
@@ -123,8 +136,13 @@ lua <<EOF
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   })
 
-  require("flutter-tools").setup{}
+  require("flutter-tools").setup{
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  }
 EOF
+
+" Tree
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " LSPCompletion
 let mapleader=" "

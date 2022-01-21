@@ -32,6 +32,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'akinsho/flutter-tools.nvim'
 
 "Dart/Flutter
@@ -71,6 +72,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+Plug 'rust-lang/rust.vim'
+
 " Haspoon
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
@@ -107,6 +110,7 @@ lua <<EOF
       { name = 'buffer' },
     }
   })
+
 
   -- Setup lspconfig.
   require('lspconfig').pyright.setup {

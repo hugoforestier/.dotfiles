@@ -1,5 +1,5 @@
 set tabstop=3 softtabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set smartindent
 set guicursor=
@@ -32,7 +32,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'akinsho/flutter-tools.nvim'
 
 "Dart/Flutter
@@ -50,7 +49,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 
 " For luasnip user.
-Plug 'L3MON4D3/LuaSnip'
+Plug 'L3MION4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 " Better UI LSP
@@ -74,7 +73,7 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 Plug 'rust-lang/rust.vim'
 
-" Haspoon
+" Harpoon
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 
@@ -131,6 +130,10 @@ lua <<EOF
   })
 
   require('lspconfig').tsserver.setup {
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  }
+
+  require('lspconfig').solidity_ls.setup {
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   }
 
@@ -249,8 +252,8 @@ let g:ale_fixers = {
  \ 'typescript': ['eslint']
  \ }
 
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+"let g:ale_sign_error = '❌'
+"let g:ale_sign_warning = '⚠️'
 
 augroup THE_PRIMEAGEN
     autocmd!

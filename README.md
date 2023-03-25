@@ -6,7 +6,7 @@ booting on a new computer.
 
 ### Tmux
 - Copy *.tmux.conf* to ~/ and source the file
-- Copy *tmux-sessionizer* to my bin folder (see: https://youtu.be/bdumjiHabhQ?t=267 to see what it does)
+- Copy *tmux-sessionizer* to your bin folder (see: https://youtu.be/bdumjiHabhQ?t=267 to see what it does)
 - In a tmux session press `ctrl+x I` to install the plugins
 
 ### Nvim

@@ -69,7 +69,9 @@ require('lazy').setup({
       },
     },
   },
-
+  { "catppuccin/nvim", name = "catppuccin" },
+  'folke/tokyonight.nvim',
+  'morhetz/gruvbox',
   'tjdevries/colorbuddy.vim',
   'tjdevries/gruvbuddy.nvim',
   -- { -- Theme inspired by Atom
@@ -80,6 +82,7 @@ require('lazy').setup({
   --   end,
   -- },
 
+  'preservim/nerdtree',
 
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -133,7 +136,10 @@ require('lazy').setup({
   },
 }, {})
 
-require('colorbuddy').colorscheme('gruvbuddy')
+-- vim.cmd.colorscheme "tokyonight"
+vim.cmd.colorscheme "gruvbox"
+-- vim.cmd.colorscheme "catppuccin"
+-- require('colorbuddy').colorscheme('gruvbuddy')
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -209,6 +215,8 @@ vim.opt.colorcolumn = "80"
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+vim.keymap.set('n', '<leader>t', ':NERDTreeToggle<CR>')
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

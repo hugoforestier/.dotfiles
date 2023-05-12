@@ -387,9 +387,9 @@ end
 local servers = {
   clangd = {},
   -- gopls = {},
-  pyright = {},
   rust_analyzer = {},
   tsserver = {},
+  ruff_lsp = {},
 
   lua_ls = {
     Lua = {

@@ -1,0 +1,34 @@
+[user]
+	name = Hugo Forestier
+	email = hugo.forestier123@gmail.com
+[alias]
+	co = checkout
+	dw = diff --word-diff
+	fa = fetch --all --tags --prune
+	ld = log --stat -p
+	lg = log --decorate --all --oneline --graph
+	rt = restore
+	rts = restore --staged
+	sd = diff --staged
+	sdw = diff --staged --word-diff
+	ss = status
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+	autocrlf = input
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[pull]
+	ff = only
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = v

@@ -99,7 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
 bindkey -s ^f "tmux-sessionizer\n"
+alias vim="nvim"
+alias i3conf="nvim ~/.config/i3/config"
+alias vimconf="nvim ~/.config/nvim/"
 
-alias vim='nvim'
+setxkbmap us

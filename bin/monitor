@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PRIMARY="eDP-1"
+SECONDARY="DP-2-2"
+
+if [ -z "$(xrandr --listactivemonitors | grep 'Monitors: 1')" ]; then
+    xrandr --output $SECONDARY --primary
+    xrandr --output $PRIMARY --auto --right-of "$PRIMARY"
+    i3-msg "workspace 1, move workspace to output $PRIMARY"
+fi

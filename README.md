@@ -1,5 +1,5 @@
 # Dotfiles
-This repo contains all my basic configuration files that I use when 
+This repo contains all my basic configuration files that I use when
 booting on a new computer.
 
 ## Installation
@@ -10,9 +10,8 @@ booting on a new computer.
 - In a tmux session press `ctrl+x I` to install the plugins
 
 ### Nvim
-- Just copy the *init.lua* file to *.config/nvim/* and everything else
-will automatically be installed when opening nvim
+- Need to rewrite this
 
 ### zsh
-- Just copy *.zshrc* to ~/ and source it 
+- Just copy *.zshrc* to ~/ and source it
 

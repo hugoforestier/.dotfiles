@@ -14,4 +14,3 @@
 xrandr --output DP-2-1 --auto
 xrandr --output DP-2-2 --auto
 xrandr --output DP-2 --auto
-

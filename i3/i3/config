@@ -170,10 +170,12 @@ bindsym $mod+Shift+s exec --no-startup-id ~/.dotfiles/bin/monitor
 # bindsym $mod+Shift+n exec --no-startup-id ~/.dotfiles/bin/resolution
 
 # FKeys
+
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id ~/.dotfiles/bin/mute_sound
+
 #
 # # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -188,3 +190,5 @@ bindsym $mod+m move workspace to output left
 # Suspend
 bindsym $mod+Shift+p exec --no-startup-id i3lock -i ~/Pictures/lockscreenimage.png
 
+# Transparency with picom compositor
+exec_always picom --fade-in-step=1 --fade-out-step=1 &

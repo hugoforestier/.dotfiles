@@ -105,3 +105,5 @@ alias i3conf="nvim ~/.config/i3/config"
 alias vimconf="nvim ~/.config/nvim/"
 
 setxkbmap us
+
+source ~/.nvm/nvm.sh

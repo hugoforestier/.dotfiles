@@ -1,5 +1,6 @@
 require("hforestier.set")
 require("hforestier.remap")
+require("hforestier.packer")
 
 -- DO NOT INCLUDE THIS
 -- vim.opt.rtp:append("~/personal/streamer-tools")

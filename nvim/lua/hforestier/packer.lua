@@ -13,6 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use {
+      'nvim-orgmode/orgmode', config = function()
+      require('orgmode').setup{}
+      end
+  }
+
 -- use({
 --	  'rose-pine/neovim',
 --	  as = 'rose-pine',

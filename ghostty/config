@@ -1,0 +1,4 @@
+theme = Dracula
+shell-integration-features = no-cursor,no-sudo,no-title
+gtk-titlebar = false
+font-feature = -calt

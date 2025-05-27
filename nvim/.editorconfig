@@ -1,0 +1,3 @@
+# Fix this
+vim.opt_local.set.shiftwidth = 2
+

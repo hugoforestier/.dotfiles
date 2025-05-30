@@ -44,6 +44,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
+-- Remove trailing whitespaces
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
+
 local job_id = 0
 vim.keymap.set("n", "<space>to", function()
 	vim.cmd.vnew()

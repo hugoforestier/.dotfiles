@@ -1,0 +1,36 @@
+set abort_nosubject = no
+set mail_check = 60
+set timeout = 10
+set sort = "reverse-date-received"
+set copy = no
+set editor = "nvim"
+
+# Basic identity
+set realname = "Hugo Forestier"
+
+folder-hook imaps://imap.gmail.com/ 'source ~/.config/mutt/accounts/gmail'
+folder-hook imaps://imap.aol.com/ 'source ~/.config/mutt/accounts/aol'
+
+# Default account
+source ~/.config/mutt/accounts/gmail
+
+macro index,pager ,g "<change-folder>imaps://imap.gmail.com/INBOX<enter>" "Switch to Gmail INBOX"
+macro index,pager ,a "<change-folder>imaps://imap.aol.com/INBOX<enter>" "Switch to AOL INBOX"
+
+color index green default ~N
+color index brightred default ~F
+
+set pgp_default_key = EE50321AC9D2F411C08653A69C4617D852BCA9E3
+set crypt_use_gpgme = yes
+# Automatically sign all out-going email
+set crypt_autosign = yes
+# Sign replies to signed emails
+set crypt_replysign = yes
+# Encrypt replies to encrypted emails
+set crypt_replyencrypt = yes
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+# Attempt to verify signatures automatically
+set crypt_verify_sig = yes
+set crypt_opportunistic_encrypt = no
+auto_view application/pgp-encrypted

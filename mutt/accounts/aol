@@ -1,0 +1,26 @@
+# AOL Account Configuration
+set from = "larochellehugo@aol.com"
+set realname = "Hugo Forestier"
+set use_from = yes
+
+set imap_user = "larochellehugo@aol.com"
+set imap_pass = "`gpg --quiet --for-your-eyes-only --no-tty -d ~/.config/mutt/accounts/aol_pass.gpg`"
+
+set folder = "imaps://imap.aol.com/"
+set spoolfile = "+Inbox"
+set record = "+Sent"
+set postponed = "+Draft"
+set trash = "+Trash"
+
+mailboxes = "+Inbox" "+Sent" "+Draft" "+Trash" "+Bulk"
+
+set smtp_url = "smtp://larochellehugo@aol.com@smtp.aol.com:587/"
+set smtp_pass = "`gpg --quiet --for-your-eyes-only --no-tty -d ~/.config/mutt/accounts/aol_pass.gpg`"
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set header_cache = "~/.config/mutt/cache/aol/headers"
+set message_cachedir = "~/.config/mutt/cache/aol/bodies"
+set certificate_file = "~/.config/mutt/certificates"
+set move = no
+set imap_keepalive = 900

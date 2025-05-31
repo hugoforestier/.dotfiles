@@ -5,6 +5,8 @@ set sort = "reverse-date-received"
 set copy = no
 set editor = "nvim"
 
+set signature = "~/.config/mutt/signature"
+
 # Basic identity
 set realname = "Hugo Forestier"
 

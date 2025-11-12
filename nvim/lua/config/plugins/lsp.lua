@@ -28,11 +28,9 @@ return {
         capabilities = require("cmp_nvim_lsp").default_capabilities()
       end
 
-      local lspconfig = require("lspconfig")
-
       local servers = {
         intelephense = true,
-        --phpactor = true,
+        phpactor = true,
         pyright = true,
         lua_ls = true,
         rust_analyzer = true,
@@ -89,8 +87,8 @@ return {
         config = vim.tbl_deep_extend("force", {}, {
           capabilities = capabilities,
         }, config)
-
-        lspconfig[name].setup(config)
+        vim.lsp.config(name, config)
+        vim.lsp.enable(name)
       end
 
       local disable_semantic_tokens = {

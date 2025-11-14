@@ -53,8 +53,6 @@ return {
         },
 
         clangd = {
-          -- TODO: Could include cmd, but not sure those were all relevant flags.
-          --    looks like something i would have added while i was floundering
           init_options = { clangdFileStatus = true },
           filetypes = { "c", "cpp" },
         },
@@ -68,6 +66,16 @@ return {
           return t
         end
       end, vim.tbl_keys(servers))
+
+      vim.diagnostic.config({
+        virtual_text = {
+          prefix = "●",
+        },
+        float = {
+          source = "always",
+        },
+        severity = { min = vim.diagnostic.severity.WARN }
+      })
 
       require("mason").setup()
       local ensure_installed = {

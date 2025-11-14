@@ -20,12 +20,12 @@ return {
         provider = "copilot",
         providers = {
           copilot = {
-            model = "claude-sonnet-4.5",
-            --endpoint = "https://api.anthropic.com",
-            --timeout = 30000, -- Timeout in milliseconds
-            --temperature = 0,
-            --max_tokens = 4096,
-            --disable_tools = true,
+            model = 'gpt-4o',
+            -- model = "claude-sonnet-4.5",
+            timeout = 30000,
+            extra_request_body = {
+              max_tokens = 20480,
+            }
           },
         },
         custom_tools = {},

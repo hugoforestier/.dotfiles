@@ -30,6 +30,12 @@ return {
         },
         custom_tools = {},
         hints = { enabled = false },
+        acp_providers = {
+          ["opencode"] = {
+            command = "opencode",
+            args = { "acp" }
+          }
+        }
       }
     end,
   },

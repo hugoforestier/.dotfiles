@@ -29,7 +29,7 @@ return {
       end
 
       local servers = {
-        intelephense = true,
+        -- intelephense = true,
         phpactor = true,
         pyright = true,
         lua_ls = true,

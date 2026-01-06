@@ -1,0 +1,40 @@
+# Mako notification configuration
+
+# Appearance
+font=sans-serif 11
+background-color=#2b2b2b
+text-color=#ffffff
+border-color=#4a90d9
+border-size=2
+border-radius=8
+padding=15
+margin=10
+
+# Icon settings
+icon-path=/usr/share/icons/gnome
+max-icon-size=48
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+max-visible=5
+sort=-time
+
+# Position (top-right corner)
+anchor=top-right
+
+# Grouping
+group-by=app-name
+
+# Urgency levels
+[urgency=low]
+border-color=#888888
+default-timeout=3000
+
+[urgency=normal]
+border-color=#4a90d9
+default-timeout=5000
+
+[urgency=critical]
+border-color=#d96459
+default-timeout=0

@@ -72,7 +72,7 @@ exec mako
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec --no-startup-id rofi -show run
+    bindsym $mod+d exec --no-startup-id rofi -show drun
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -94,11 +94,20 @@ exec mako
     bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
     bindsym XF86AudioLowerVolume exec amixer set Master 5%-
     bindsym XF86AudioMute exec amixer set Master toggle
-    
+
     # Alternative volume controls (if media keys don't work)
     bindsym $mod+equal exec amixer set Master 5%+
     bindsym $mod+Shift+equal exec amixer set Master 5%-
     bindsym $mod+m exec amixer set Master toggle
+
+    # WiFi selection menu
+    bindsym $mod+n exec ~/.config/sway/wifi-menu.sh
+
+    # Bluetooth selection menu
+    bindsym $mod+Shift+b exec ~/.config/sway/bluetooth-menu.sh
+
+    # Audio output selection menu
+    bindsym $mod+Shift+a exec ~/.config/sway/audio-menu.sh
 #
 # Moving around:
 #

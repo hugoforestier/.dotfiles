@@ -1,0 +1,24 @@
+[user]
+    name = Hugo Forestier
+    email = hugo.forestier123@gmail.com
+[push]
+    default = "current"
+    autoSetupRemote = true
+[fetech]
+    prune = true
+[diff]
+    colormoved = "default"
+    colormovedws = "allow-indentation-change"
+[branch]
+    sort= "committerdate"
+[merge]
+    conflictstyle = "diff3"
+	tool = vimdiff
+[advice]
+    detachedHead = false
+[bash]
+	showDirtyState = true
+
+[core]
+	editor = vim
+	excludesFile = ~/.config/git/exclude
